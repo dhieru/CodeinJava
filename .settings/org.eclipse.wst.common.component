@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CSVDataSource">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="guava-r07-gwt.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/guava-r07-gwt/guava-r07-gwt">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-lang-2.6/commons-lang-2.6">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="icu4j-3.4.4.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/icu4j-3.4.4/icu4j-3.4.4">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-r07.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/guava-r07/guava-r07">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="visualization-datasource-1.0.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/visualization-datasource-1.0.1/visualization-datasource-1.0.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="visualization-datasource-1.1.1-sources.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/visualization-datasource-1.1.1-sources/visualization-datasource-1.1.1-sources">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/commons-logging-1.1.2/commons-logging-1.1.2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="apache-logging-log4j.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/apache-logging-log4j/apache-logging-log4j">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="CSVDataSource"/>
+        <property name="java-output-path" value="/CSVDataSource/build/classes"/>
+    </wb-module>
+</project-modules>

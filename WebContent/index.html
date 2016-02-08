@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <title>Getting Started Example</title>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+
+  //Load the Visualization API and the ready-made Google table visualization
+  google.load('visualization', '1', {'packages':['table']});
+
+  // Set a callback to run when the API is loaded.
+  google.setOnLoadCallback(init);
+
+  // Send the query to the data source.
+  function init() {
+alert('init');
+    // Specify the data source URL.
+   // var query = new google.visualization.Query('http://data-gov.tw.rpi.edu/ws/sparqlproxy.php?query-uri=http%3A%2F%2Fdata-gov.tw.rpi.edu%2Fsparql%2Fquakemap.sparql&output=gvds');
+    var query = new google.visualization.Query('simpleexample');
+    alert('the query is :-'+query);
+
+    // Send the query with a callback function.
+    query.send(handleQueryResponse);
+  }
+
+  // Handle the query response.
+  function handleQueryResponse(response) {
+    if (response.isError()) {
+    	alert("1");
+      alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+      return;
+    }
+
+    // Draw the visualization.
+    var data = response.getDataTable();
+    var chart = new google.visualization.Table(document.getElementById('chart_div'));
+    chart.draw(data, {width: 600, height: 150, is3D: true});
+  }
+  </script>
+</head>
+<body>
+  <h1>Hello! Data Source!</h1>
+  A table chart that shows data taken from the simple data source.
+  <!--Div that will hold the visualization-->
+  <div id="chart_div"></div>
+</body>
+</html>
